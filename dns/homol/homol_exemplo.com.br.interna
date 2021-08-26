@@ -1,0 +1,23 @@
+$TTL 60
+@	IN 	SOA		dns-interno.exemplo.com.br.br. suporte.exemplo.com.br.br. (
+					2021082411		; Serial
+					120 			; Refresh
+					120 			; Retry
+					12900 	    		; Expire
+					3600 )			; Negative Cache TTL
+;					
+@	IN 	NS 	dns-interno.exemplo.com.br.br.
+					MX 10   mail.exemplo.com.br.
+
+mail    					 IN	A       192.168.122.51
+
+dns-interno					 IN 	A 	192.168.122.51
+;
+docker						IN	A	192.168.122.101
+docker02					IN	A	192.168.122.101
+docker03					IN	A	192.168.122.101
+ansible						IN	A	192.168.122.1
+ansible2					IN	A	192.168.122.1
+ansible3					IN	A	192.168.122.1
+gitlab						IN	A	192.168.122.132
+teste						IN	A	192.168.122.51

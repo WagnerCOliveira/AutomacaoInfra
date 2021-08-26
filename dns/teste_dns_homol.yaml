@@ -1,0 +1,20 @@
+---
+- name: Copia dnsTest.sh
+  vars:
+    stage: homol
+  hosts: dns
+  tasks:
+  - name: Copia dnsTest.sh
+    copy:
+      src: ./homol/dnsTest.sh
+      dest: /root/dnsTest.sh
+
+- name: Copia dnsTest.py
+  vars:
+    stage: homol
+  hosts: dns
+  tasks:
+  - name: Copia dnsTest.py
+    copy:
+      src: ./homol/dnsTest.py
+      dest: /root/dnsTest.py

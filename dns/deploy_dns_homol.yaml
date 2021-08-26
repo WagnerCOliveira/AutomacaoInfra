@@ -1,0 +1,14 @@
+---
+- name: Copia Zona homol_exemplo.com.br
+  vars:
+    stage: homol
+  hosts: dns
+  tasks:
+  - name: Copia homol_sepog.exemplo.com.br.interna
+    copy:
+      src: ./homol/{{ stage }}_.exemplo.com.br.interna
+      dest: /var/named/exemplo.com.br.interna
+
+  - name: Restart DNS
+    service: name=named state=restarted
+
